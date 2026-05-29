@@ -51,7 +51,8 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         ├── references/
         │   ├── hero-variants.md       Hero catalog: when to use each, props
         │   ├── features-variants.md   Features catalog
-        │   └── pricing-variants.md    Pricing catalog
+        │   ├── pricing-variants.md    Pricing catalog
+        │   └── testimonials-variants.md  Testimonials catalog
         ├── LogoCloud.tsx     Reference logo cloud (social proof)
         ├── Features.tsx      Reference features section (grid variant)
         ├── features/         Alternative features templates
@@ -61,7 +62,10 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         ├── pricing/          Alternative pricing templates
         │   ├── PricingSingle.tsx
         │   └── PricingTable.tsx
-        ├── Testimonials.tsx  Reference testimonials section
+        ├── Testimonials.tsx  Reference testimonials section (grid variant)
+        ├── testimonials/     Alternative testimonials templates
+        │   ├── TestimonialSingle.tsx
+        │   └── TestimonialsMasonry.tsx
         ├── FAQ.tsx           Reference FAQ section
         ├── CTA.tsx           Reference call-to-action section
         └── Footer.tsx        Reference footer section

@@ -205,6 +205,14 @@ accessible (semantic `<figure>`/`<blockquote>`/`<figcaption>`).
 Use real names and specific, concrete quotes (outcomes, not adjectives). Decorative
 avatars take `alt=""` since the name is in the caption.
 
+Three ready-to-copy variants — see [`references/testimonials-variants.md`](./references/testimonials-variants.md):
+
+| Variant | File |
+|---|---|
+| Grid (default) | [`Testimonials.tsx`](./Testimonials.tsx) |
+| Single featured quote | [`testimonials/TestimonialSingle.tsx`](./testimonials/TestimonialSingle.tsx) |
+| Masonry wall | [`testimonials/TestimonialsMasonry.tsx`](./testimonials/TestimonialsMasonry.tsx) |
+
 ## FAQ section
 
 An accessible accordion of common questions. Reference component:
