@@ -53,7 +53,8 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         │   ├── features-variants.md   Features catalog
         │   ├── pricing-variants.md    Pricing catalog
         │   ├── testimonials-variants.md  Testimonials catalog
-        │   └── cta-variants.md        CTA catalog
+        │   ├── cta-variants.md        CTA catalog
+        │   └── footer-variants.md     Footer catalog
         ├── LogoCloud.tsx     Reference logo cloud (social proof)
         ├── Features.tsx      Reference features section (grid variant)
         ├── features/         Alternative features templates
@@ -72,7 +73,10 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         ├── cta/              Alternative CTA templates
         │   ├── CTASplit.tsx
         │   └── CTAGradient.tsx
-        └── Footer.tsx        Reference footer section
+        ├── Footer.tsx        Reference footer section (columns variant)
+        └── footers/          Alternative footer templates
+            ├── FooterMinimal.tsx
+            └── FooterNewsletter.tsx
 ```
 
 ## Contributing

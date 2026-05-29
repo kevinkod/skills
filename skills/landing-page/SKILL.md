@@ -164,6 +164,14 @@ component: [`Footer.tsx`](./Footer.tsx) — responsive (stacks on mobile), acces
 Group links by intent, keep 3–5 columns max, and give every social link an
 accessible `label`.
 
+Three ready-to-copy variants — see [`references/footer-variants.md`](./references/footer-variants.md):
+
+| Variant | File |
+|---|---|
+| Columns (default) | [`Footer.tsx`](./Footer.tsx) |
+| Minimal | [`footers/FooterMinimal.tsx`](./footers/FooterMinimal.tsx) |
+| Newsletter signup | [`footers/FooterNewsletter.tsx`](./footers/FooterNewsletter.tsx) |
+
 ## Navbar / Header section
 
 Sticky top navigation with a mobile menu. Reference component:
