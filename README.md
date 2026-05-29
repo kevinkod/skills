@@ -41,7 +41,15 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
     └── landing-page/
         ├── SKILL.md          The skill (source of truth)
         ├── Navbar.tsx        Reference navbar / header
-        ├── Hero.tsx          Reference hero section
+        ├── Hero.tsx          Reference hero section (split variant)
+        ├── heroes/           5 alternative hero templates
+        │   ├── HeroCentered.tsx
+        │   ├── HeroGradient.tsx
+        │   ├── HeroBackgroundImage.tsx
+        │   ├── HeroWaitlist.tsx
+        │   └── HeroScreenshot.tsx
+        ├── references/
+        │   └── hero-variants.md   Hero catalog: when to use each, props
         ├── LogoCloud.tsx     Reference logo cloud (social proof)
         ├── Features.tsx      Reference features section
         ├── Pricing.tsx       Reference pricing section

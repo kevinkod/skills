@@ -53,13 +53,24 @@ Pick the sections that fit the product; order is a default, not a rule.
 
 ## Implementation
 
-Ready-to-copy reference component: [`Hero.tsx`](./Hero.tsx) (split variant,
-responsive, accessible). Adapt the copy, links, and colors.
+Six ready-to-copy hero templates, all responsive and accessible. The default
+**split** variant is [`Hero.tsx`](./Hero.tsx); the five alternatives live in
+[`heroes/`](./heroes/). For when-to-use guidance, props, and the full catalog, see
+[`references/hero-variants.md`](./references/hero-variants.md).
+
+| Variant | File |
+|---|---|
+| Split (default) | [`Hero.tsx`](./Hero.tsx) |
+| Centered | [`heroes/HeroCentered.tsx`](./heroes/HeroCentered.tsx) |
+| Gradient | [`heroes/HeroGradient.tsx`](./heroes/HeroGradient.tsx) |
+| Background image | [`heroes/HeroBackgroundImage.tsx`](./heroes/HeroBackgroundImage.tsx) |
+| Waitlist (email capture) | [`heroes/HeroWaitlist.tsx`](./heroes/HeroWaitlist.tsx) |
+| Screenshot | [`heroes/HeroScreenshot.tsx`](./heroes/HeroScreenshot.tsx) |
 
 Workflow:
 1. Ask for (or infer): product, audience, value proposition, desired action.
-2. Pick a layout variant based on context.
-3. Copy `Hero.tsx`, fill in the content, tune the Tailwind classes to the brand.
+2. Pick a variant (see the catalog's "Choosing a variant" guide).
+3. Copy the chosen file, fill in the content, tune the Tailwind classes to the brand.
 4. Verify against the quality checklist.
 
 ## Features section
