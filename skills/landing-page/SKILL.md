@@ -116,6 +116,14 @@ Pricing tiers with a monthly/annual billing toggle. Reference component:
 App Router (already included). Keep one tier `highlighted` to anchor the eye, and a
 single primary action per tier.
 
+Three ready-to-copy variants — see [`references/pricing-variants.md`](./references/pricing-variants.md):
+
+| Variant | File |
+|---|---|
+| Tiers + toggle (default) | [`Pricing.tsx`](./Pricing.tsx) |
+| Single plan | [`pricing/PricingSingle.tsx`](./pricing/PricingSingle.tsx) |
+| Comparison table | [`pricing/PricingTable.tsx`](./pricing/PricingTable.tsx) |
+
 ## CTA section
 
 A focused call-to-action band, typically placed right before the footer. Reference
