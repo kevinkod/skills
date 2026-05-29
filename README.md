@@ -1,52 +1,52 @@
 # Skills
 
-Mes skills perso pour agents de code (**Claude Code** & **Codex**). Un repo public
-pour les partager et les réutiliser facilement d'un projet à l'autre.
+My personal skills for coding agents (**Claude Code** & **Codex**). A public repo
+to share and reuse them easily across projects.
 
-Je suis Kevin Raimbaud, développeur fullstack JavaScript. Ces skills encodent mes
-façons de faire récurrentes pour que l'agent les applique automatiquement.
+I'm Kevin Raimbaud, a fullstack JavaScript developer. These skills encode my
+recurring ways of working so the agent applies them automatically.
 
-## Skills disponibles
+## Available skills
 
 | Skill | Description |
 |---|---|
-| [`landing-page`](./skills/landing-page/SKILL.md) | Créer une landing page / hero section en React + Tailwind (TypeScript), section par section. |
+| [`landing-page`](./skills/landing-page/SKILL.md) | Build a landing page / hero section in React + Tailwind (TypeScript), section by section. |
 
 ## Installation
 
 ### Claude Code
 
-Copie (ou symlink) les skills voulus dans ton dossier de skills personnel :
+Copy (or symlink) the skills you want into your personal skills folder:
 
 ```bash
-git clone https://github.com/<ton-user>/skills.git
+git clone https://github.com/kevinkod/skills.git
 ln -s "$(pwd)/skills/skills/landing-page" ~/.claude/skills/landing-page
 ```
 
-Claude Code découvre alors le skill et le charge quand le contexte s'y prête.
+Claude Code then discovers the skill and loads it when the context calls for it.
 
 ### Codex
 
-Codex lit nativement [`AGENTS.md`](./AGENTS.md), qui sert de **constitution** :
-il indexe les skills et indique quand les charger. Pointe Codex vers ce repo (ou
-copie `AGENTS.md` + le dossier `skills/` à la racine de ton projet).
+Codex natively reads [`AGENTS.md`](./AGENTS.md), which acts as the **constitution**:
+it indexes the skills and states when to load them. Point Codex at this repo (or
+copy `AGENTS.md` + the `skills/` folder to the root of your project).
 
 ## Structure
 
 ```
 .
-├── AGENTS.md                 Constitution : conventions + registre des skills
+├── AGENTS.md                 Constitution: conventions + skill registry
 ├── README.md
 └── skills/
     └── landing-page/
-        ├── SKILL.md          Le skill (source de vérité)
-        └── Hero.tsx          Composant de référence
+        ├── SKILL.md          The skill (source of truth)
+        └── Hero.tsx          Reference component
 ```
 
-## Contribuer
+## Contributing
 
-Repo perso, mais les retours et suggestions sont bienvenus via issues/PR.
+Personal repo, but feedback and suggestions are welcome via issues/PRs.
 
-## Licence
+## License
 
 MIT.

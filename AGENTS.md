@@ -1,29 +1,29 @@
 # AGENTS.md — Constitution
 
-Fichier d'autorité de ce repo. Lu nativement par Codex et utilisé comme référence
-par Claude Code. Il définit les conventions du repo et tient le **registre des
-skills**.
+Authority file for this repo. Read natively by Codex and used as a reference by
+Claude Code. It defines the repo conventions and holds the **skill registry**.
 
-## Rôle
+## Role
 
-Ce repo rassemble mes skills perso pour agents de code (Claude Code / Codex). Le
-contenu de chaque skill est **canonique dans son `SKILL.md`** — cette constitution
-ne duplique pas le contenu, elle l'indexe et indique quand le charger.
+This repo gathers my personal skills for coding agents (Claude Code / Codex). Each
+skill's content is **canonical in its own `SKILL.md`** — this constitution does not
+duplicate content, it indexes it and states when to load it.
 
 ## Conventions
 
-- Un skill = un dossier `skills/<nom>/SKILL.md`.
-- Frontmatter YAML requis : `name` et `description` (la description commence par
-  « Use when… » et décrit les conditions de déclenchement, pas le process).
-- Fichiers de support (composants, scripts) à côté du `SKILL.md`.
-- Stack par défaut des skills front : **React + Tailwind, TypeScript (`.tsx`)**.
-- Langue du contenu : français.
+- One skill = one folder `skills/<name>/SKILL.md`.
+- Required YAML frontmatter: `name` and `description` (the description starts with
+  "Use when…" and describes triggering conditions, not the process).
+- Support files (components, scripts) live next to the `SKILL.md`.
+- Default stack for frontend skills: **React + Tailwind, TypeScript (`.tsx`)**.
+- **Content language: English. Writing in French is forbidden.** All files in this
+  repo — skills, docs, comments, commit messages — must be written in English.
 
-## Registre des skills
+## Skill registry
 
-| Skill | Quand le charger | Source |
+| Skill | When to load | Source |
 |---|---|---|
-| `landing-page` | Création d'une landing page ou d'une hero section en React + Tailwind | [`skills/landing-page/SKILL.md`](./skills/landing-page/SKILL.md) |
+| `landing-page` | Building a landing page or a hero section in React + Tailwind | [`skills/landing-page/SKILL.md`](./skills/landing-page/SKILL.md) |
 
-**Instruction agents :** quand une tâche correspond à la colonne « Quand le charger »,
-lire le `SKILL.md` correspondant et suivre ses instructions avant d'écrire du code.
+**Agent instruction:** when a task matches the "When to load" column, read the
+matching `SKILL.md` and follow its instructions before writing code.

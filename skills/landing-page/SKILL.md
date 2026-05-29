@@ -7,63 +7,64 @@ description: Use when building a landing page or a hero section in React + Tailw
 
 ## Overview
 
-Crée des landing pages section par section en **React + Tailwind (TypeScript / `.tsx`)**.
-Le repo démarre minimal : une seule section solide, la **Hero section** (l'espace
-above-the-fold). On compose la page en ajoutant d'autres sections par-dessus.
+Build landing pages section by section in **React + Tailwind (TypeScript / `.tsx`)**.
+The repo starts minimal: one solid section, the **hero section** (the above-the-fold
+area). Compose the page by adding more sections on top.
 
-Principe : une section = un composant `.tsx` autonome, responsive et accessible,
-qu'on copie puis qu'on adapte au produit. Pas de générateur magique — un point de
-départ de qualité production qu'on personnalise.
+Principle: one section = one self-contained `.tsx` component, responsive and
+accessible, that you copy and adapt to the product. No magic generator — a
+production-quality starting point you customize.
 
-## Anatomie d'une Hero section
+## Anatomy of a hero section
 
-| Élément | Rôle | Obligatoire |
+| Element | Role | Required |
 |---|---|---|
-| Eyebrow | Petit label au-dessus du titre (catégorie, nouveauté) | Non |
-| Titre (h1) | La proposition de valeur, courte et concrète | **Oui** |
-| Sous-titre | 1–2 phrases qui précisent le bénéfice | **Oui** |
-| CTA principal | Action désirée n°1 (bouton plein) | **Oui** |
-| CTA secondaire | Alternative basse friction (lien, « En savoir plus ») | Non |
-| Social proof | Logos, note, nombre d'utilisateurs | Recommandé |
-| Visuel | Capture produit, illustration ou dégradé | Non |
+| Eyebrow | Small label above the title (category, "new") | No |
+| Title (h1) | The value proposition, short and concrete | **Yes** |
+| Subtitle | 1–2 sentences clarifying the benefit | **Yes** |
+| Primary CTA | The #1 desired action (solid button) | **Yes** |
+| Secondary CTA | Low-friction alternative (link, "Learn more") | No |
+| Social proof | Logos, rating, user count | Recommended |
+| Visual | Product screenshot, illustration, or gradient | No |
 
-## Variantes de layout
+## Layout variants
 
-- **Centré** : tout aligné au centre, idéal early-stage / pré-launch.
-- **Split** : texte à gauche, visuel à droite (grid 2 colonnes ≥ `lg`). Le plus
-  courant pour un SaaS.
-- **Fond dégradé** : variante centré/split avec fond `bg-gradient-to-b` et accents.
+- **Centered**: everything center-aligned, ideal for early-stage / pre-launch.
+- **Split**: text on the left, visual on the right (2-column grid at `lg`+). The most
+  common choice for a SaaS.
+- **Gradient background**: centered/split variant with a `bg-gradient-to-b`
+  background and accent colors.
 
-## Implémentation
+## Implementation
 
-Composant de référence prêt à copier : [`Hero.tsx`](./Hero.tsx) (variante split,
-responsive, accessible). Adapte le texte, les liens et les couleurs.
+Ready-to-copy reference component: [`Hero.tsx`](./Hero.tsx) (split variant,
+responsive, accessible). Adapt the copy, links, and colors.
 
-Workflow :
-1. Demander (ou déduire) : produit, audience, proposition de valeur, action désirée.
-2. Choisir une variante de layout selon le contexte.
-3. Copier `Hero.tsx`, remplir le contenu, ajuster les classes Tailwind à la charte.
-4. Vérifier avec la checklist qualité.
+Workflow:
+1. Ask for (or infer): product, audience, value proposition, desired action.
+2. Pick a layout variant based on context.
+3. Copy `Hero.tsx`, fill in the content, tune the Tailwind classes to the brand.
+4. Verify against the quality checklist.
 
-## Checklist qualité
+## Quality checklist
 
-- [ ] **Responsive** : testé mobile → desktop, pas de débordement, CTA tappable (≥ 44px).
-- [ ] **Accessibilité** : un seul `<h1>`, contraste AA, `alt` sur les images, focus visible.
-- [ ] **Hiérarchie** : le titre domine, le CTA principal se distingue du secondaire.
-- [ ] **Contenu** : titre concret (bénéfice, pas slogan vague), sous-titre qui complète.
-- [ ] **Perf** : image optimisée (`loading`, dimensions), pas de dépendance lourde.
-- [ ] **Pas d'« AI look »** : éviter le dégradé violet générique + emoji + lorem. Choix
-      typographiques et d'espacement intentionnels.
+- [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
+- [ ] **Accessibility**: a single `<h1>`, AA contrast, `alt` on images, visible focus.
+- [ ] **Hierarchy**: the title dominates, the primary CTA stands out from the secondary.
+- [ ] **Content**: concrete title (a benefit, not a vague slogan), subtitle that complements it.
+- [ ] **Performance**: optimized image (`loading`, dimensions), no heavy dependency.
+- [ ] **No "AI look"**: avoid the generic purple gradient + emoji + lorem ipsum.
+      Intentional typography and spacing choices.
 
-## Étendre à d'autres sections
+## Extending to other sections
 
-Ajouter une section = nouveau composant dans ce dossier (`Features.tsx`,
-`Pricing.tsx`, `CTA.tsx`, `Footer.tsx`…) suivant les mêmes principes (autonome,
-responsive, accessible) et l'ajouter à cette doc.
+Adding a section = a new component in this folder (`Features.tsx`, `Pricing.tsx`,
+`CTA.tsx`, `Footer.tsx`…) following the same principles (self-contained, responsive,
+accessible) and added to this doc.
 
-## Erreurs courantes
+## Common mistakes
 
-- Titre = slogan marketing vague (« Libérez votre potentiel ») au lieu d'un bénéfice clair.
-- Trop de CTA concurrents : une seule action principale.
-- Visuel décoratif sans `alt` ou qui casse le layout mobile.
-- Couleurs/typo par défaut qui donnent l'aspect template générique.
+- Title is a vague marketing slogan ("Unlock your potential") instead of a clear benefit.
+- Too many competing CTAs: keep a single primary action.
+- Decorative visual with no `alt` or that breaks the mobile layout.
+- Default colors/typography that produce a generic-template look.

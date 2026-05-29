@@ -1,6 +1,6 @@
-// Hero section de référence — variante "split" (texte à gauche, visuel à droite).
-// React + Tailwind, TypeScript. Responsive et accessible.
-// Copie ce composant puis adapte le contenu, les liens et les couleurs à ta charte.
+// Reference hero section — "split" variant (text on the left, visual on the right).
+// React + Tailwind, TypeScript. Responsive and accessible.
+// Copy this component, then adapt the content, links, and colors to your brand.
 
 type HeroProps = {
   eyebrow?: string;
@@ -8,7 +8,7 @@ type HeroProps = {
   subtitle: string;
   primaryCta: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
-  /** URL du visuel produit ; si absent, un placeholder dégradé est affiché. */
+  /** Product visual URL; if absent, a gradient placeholder is shown. */
   imageUrl?: string;
   imageAlt?: string;
 };
@@ -25,7 +25,7 @@ export function Hero({
   return (
     <section className="relative isolate overflow-hidden bg-white">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:gap-16 lg:py-28">
-        {/* Colonne texte */}
+        {/* Text column */}
         <div className="max-w-xl">
           {eyebrow && (
             <p className="mb-4 inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-200">
@@ -58,7 +58,7 @@ export function Hero({
           </div>
         </div>
 
-        {/* Colonne visuel */}
+        {/* Visual column */}
         <div className="relative">
           {imageUrl ? (
             <img
@@ -79,11 +79,11 @@ export function Hero({
   );
 }
 
-// Exemple d'usage :
+// Usage example:
 // <Hero
-//   eyebrow="Nouveau"
-//   title="Lance ta landing page en quelques minutes"
-//   subtitle="Des sections React + Tailwind prêtes à l'emploi, accessibles et responsive."
-//   primaryCta={{ label: "Commencer", href: "/signup" }}
-//   secondaryCta={{ label: "Voir la démo", href: "/demo" }}
+//   eyebrow="New"
+//   title="Launch your landing page in minutes"
+//   subtitle="Ready-to-use React + Tailwind sections, accessible and responsive."
+//   primaryCta={{ label: "Get started", href: "/signup" }}
+//   secondaryCta={{ label: "View demo", href: "/demo" }}
 // />
