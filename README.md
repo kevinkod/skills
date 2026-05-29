@@ -59,7 +59,8 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         │   ├── pricing-variants.md    Pricing catalog
         │   ├── testimonials-variants.md  Testimonials catalog
         │   ├── cta-variants.md        CTA catalog
-        │   └── footer-variants.md     Footer catalog
+        │   ├── footer-variants.md     Footer catalog
+        │   └── faq-variants.md        FAQ catalog
         ├── LogoCloud.tsx     Reference logo cloud (grid variant)
         ├── logoclouds/       Alternative logo cloud templates
         │   ├── LogoCloudMarquee.tsx
@@ -76,7 +77,10 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         ├── testimonials/     Alternative testimonials templates
         │   ├── TestimonialSingle.tsx
         │   └── TestimonialsMasonry.tsx
-        ├── FAQ.tsx           Reference FAQ section
+        ├── FAQ.tsx           Reference FAQ section (accordion variant)
+        ├── faqs/             Alternative FAQ templates
+        │   ├── FAQGrid.tsx
+        │   └── FAQCategorized.tsx
         ├── CTA.tsx           Reference call-to-action section (band variant)
         ├── cta/              Alternative CTA templates
         │   ├── CTASplit.tsx

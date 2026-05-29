@@ -261,6 +261,14 @@ An accessible accordion of common questions. Reference component:
 `"use client"` in the Next.js App Router (already included). Answer real objections
 (pricing, cancellation, support, compatibility), not filler.
 
+Three ready-to-copy variants — see [`references/faq-variants.md`](./references/faq-variants.md):
+
+| Variant | File |
+|---|---|
+| Accordion (default) | [`FAQ.tsx`](./FAQ.tsx) |
+| Grid (all visible) | [`faqs/FAQGrid.tsx`](./faqs/FAQGrid.tsx) |
+| Categorized | [`faqs/FAQCategorized.tsx`](./faqs/FAQCategorized.tsx) |
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
