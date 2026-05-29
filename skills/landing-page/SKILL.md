@@ -139,6 +139,14 @@ accessible (`aria-labelledby`).
 
 Keep it short and single-purpose: one dominant action, minimal copy.
 
+Three ready-to-copy variants — see [`references/cta-variants.md`](./references/cta-variants.md):
+
+| Variant | File |
+|---|---|
+| Band (default) | [`CTA.tsx`](./CTA.tsx) |
+| Split with image | [`cta/CTASplit.tsx`](./cta/CTASplit.tsx) |
+| Gradient band | [`cta/CTAGradient.tsx`](./cta/CTAGradient.tsx) |
+
 ## Footer section
 
 Site footer with brand, link columns, social links, and copyright. Reference
