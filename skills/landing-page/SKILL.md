@@ -189,6 +189,14 @@ accessible (`<nav aria-label>`, `aria-expanded` + `aria-controls` toggle).
 `"use client"` in the Next.js App Router (already included). Keep the link set short
 (3–6) and a single CTA.
 
+Three ready-to-copy variants — see [`references/navbar-variants.md`](./references/navbar-variants.md):
+
+| Variant | File |
+|---|---|
+| Standard (default) | [`Navbar.tsx`](./Navbar.tsx) |
+| Centered logo | [`navbars/NavbarCentered.tsx`](./navbars/NavbarCentered.tsx) |
+| Announcement bar | [`navbars/NavbarAnnouncement.tsx`](./navbars/NavbarAnnouncement.tsx) |
+
 ## Logo cloud (social proof) section
 
 A "trusted by" band of customer/brand logos, usually right under the hero.

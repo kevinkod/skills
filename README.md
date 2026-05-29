@@ -40,7 +40,10 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
 └── skills/
     └── landing-page/
         ├── SKILL.md          The skill (source of truth)
-        ├── Navbar.tsx        Reference navbar / header
+        ├── Navbar.tsx        Reference navbar / header (standard variant)
+        ├── navbars/          Alternative navbar templates
+        │   ├── NavbarCentered.tsx
+        │   └── NavbarAnnouncement.tsx
         ├── Hero.tsx          Reference hero section (split variant)
         ├── heroes/           5 alternative hero templates
         │   ├── HeroCentered.tsx
@@ -50,6 +53,7 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         │   └── HeroScreenshot.tsx
         ├── references/
         │   ├── hero-variants.md       Hero catalog: when to use each, props
+        │   ├── navbar-variants.md     Navbar catalog
         │   ├── features-variants.md   Features catalog
         │   ├── pricing-variants.md    Pricing catalog
         │   ├── testimonials-variants.md  Testimonials catalog
