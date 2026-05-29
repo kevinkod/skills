@@ -84,6 +84,21 @@ Pricing tiers with a monthly/annual billing toggle. Reference component:
 App Router (already included). Keep one tier `highlighted` to anchor the eye, and a
 single primary action per tier.
 
+## CTA section
+
+A focused call-to-action band, typically placed right before the footer. Reference
+component: [`CTA.tsx`](./CTA.tsx) — centered card on a dark band, responsive,
+accessible (`aria-labelledby`).
+
+| Element | Role | Required |
+|---|---|---|
+| Title (h2) | The final nudge | **Yes** |
+| Subtitle | One reassuring line (e.g. "no credit card") | No |
+| Primary CTA | The desired action | **Yes** |
+| Secondary CTA | Low-friction alternative | No |
+
+Keep it short and single-purpose: one dominant action, minimal copy.
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
