@@ -46,6 +46,7 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         ├── Features.tsx      Reference features section
         ├── Pricing.tsx       Reference pricing section
         ├── Testimonials.tsx  Reference testimonials section
+        ├── FAQ.tsx           Reference FAQ section
         ├── CTA.tsx           Reference call-to-action section
         └── Footer.tsx        Reference footer section
 ```

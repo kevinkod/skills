@@ -15,6 +15,22 @@ Principle: one section = one self-contained `.tsx` component, responsive and
 accessible, that you copy and adapt to the product. No magic generator — a
 production-quality starting point you customize.
 
+## Recommended page order
+
+Compose a full landing page top to bottom:
+
+1. **Navbar** ([`Navbar.tsx`](./Navbar.tsx)) — sticky header
+2. **Hero** ([`Hero.tsx`](./Hero.tsx)) — above the fold
+3. **Logo cloud** ([`LogoCloud.tsx`](./LogoCloud.tsx)) — social proof
+4. **Features** ([`Features.tsx`](./Features.tsx))
+5. **Testimonials** ([`Testimonials.tsx`](./Testimonials.tsx))
+6. **Pricing** ([`Pricing.tsx`](./Pricing.tsx))
+7. **FAQ** ([`FAQ.tsx`](./FAQ.tsx))
+8. **CTA** ([`CTA.tsx`](./CTA.tsx)) — final nudge
+9. **Footer** ([`Footer.tsx`](./Footer.tsx))
+
+Pick the sections that fit the product; order is a default, not a rule.
+
 ## Anatomy of a hero section
 
 | Element | Role | Required |
@@ -164,6 +180,22 @@ accessible (semantic `<figure>`/`<blockquote>`/`<figcaption>`).
 
 Use real names and specific, concrete quotes (outcomes, not adjectives). Decorative
 avatars take `alt=""` since the name is in the caption.
+
+## FAQ section
+
+An accessible accordion of common questions. Reference component:
+[`FAQ.tsx`](./FAQ.tsx) — one item open at a time, accessible (`<dl>`/`<dt>`/`<dd>`,
+`aria-expanded` + `aria-controls`, panel `role="region"`).
+
+| Element | Role | Required |
+|---|---|---|
+| Title (h2) | Section heading | No (defaults) |
+| Question | The collapsed label | **Yes** |
+| Answer | The expandable panel | **Yes** |
+
+**Stateful component:** uses `useState` to track the open item, so it needs
+`"use client"` in the Next.js App Router (already included). Answer real objections
+(pricing, cancellation, support, compatibility), not filler.
 
 ## Quality checklist
 
