@@ -64,6 +64,26 @@ accessible (`aria-labelledby`, semantic list).
 Layout variants: **3-column** (default, SaaS), **2-column** (fewer, richer features),
 **alternating** (icon/text rows for storytelling). Adjust the grid classes to switch.
 
+## Pricing section
+
+Pricing tiers with a monthly/annual billing toggle. Reference component:
+[`Pricing.tsx`](./Pricing.tsx) — responsive (1 col → 3 at `lg`), accessible toggle
+(`role="group"`, `aria-pressed`), optional highlighted tier.
+
+| Element | Role | Required |
+|---|---|---|
+| Title (h2) | What the pricing offers | **Yes** |
+| Billing toggle | Monthly/annual switch (`useState`) | **Yes** |
+| Tier name (h3) | Plan name | **Yes** |
+| Price | Per-month amount per period (`{ monthly, annual }`) | **Yes** |
+| Feature list | What the tier includes | **Yes** |
+| Tier CTA | Plan action button | **Yes** |
+| Highlight | Marks the "Most popular" tier | No |
+
+**Stateful component:** uses `useState`, so it needs `"use client"` in the Next.js
+App Router (already included). Keep one tier `highlighted` to anchor the eye, and a
+single primary action per tier.
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
