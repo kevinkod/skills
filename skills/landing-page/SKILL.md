@@ -133,6 +133,21 @@ accessible (`<nav aria-label>`, `aria-expanded` + `aria-controls` toggle).
 `"use client"` in the Next.js App Router (already included). Keep the link set short
 (3–6) and a single CTA.
 
+## Logo cloud (social proof) section
+
+A "trusted by" band of customer/brand logos, usually right under the hero.
+Reference component: [`LogoCloud.tsx`](./LogoCloud.tsx) — responsive grid (2 → 3 → 5
+columns), accessible (each logo has a screen-reader name), logos via `ReactNode`
+slot.
+
+| Element | Role | Required |
+|---|---|---|
+| Heading | Small "trusted by" label | No (defaults) |
+| Logos | Brand logos with accessible `name` | **Yes** |
+
+Use real, recognizable logos; keep them monochrome/grayscale for visual calm. Give
+each logo `alt=""` (decorative) since the accessible name comes from `name`.
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).

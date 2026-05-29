@@ -42,6 +42,7 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         ├── SKILL.md          The skill (source of truth)
         ├── Navbar.tsx        Reference navbar / header
         ├── Hero.tsx          Reference hero section
+        ├── LogoCloud.tsx     Reference logo cloud (social proof)
         ├── Features.tsx      Reference features section
         ├── Pricing.tsx       Reference pricing section
         ├── CTA.tsx           Reference call-to-action section
