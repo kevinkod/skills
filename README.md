@@ -54,12 +54,16 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         ├── references/
         │   ├── hero-variants.md       Hero catalog: when to use each, props
         │   ├── navbar-variants.md     Navbar catalog
+        │   ├── logocloud-variants.md  Logo cloud catalog
         │   ├── features-variants.md   Features catalog
         │   ├── pricing-variants.md    Pricing catalog
         │   ├── testimonials-variants.md  Testimonials catalog
         │   ├── cta-variants.md        CTA catalog
         │   └── footer-variants.md     Footer catalog
-        ├── LogoCloud.tsx     Reference logo cloud (social proof)
+        ├── LogoCloud.tsx     Reference logo cloud (grid variant)
+        ├── logoclouds/       Alternative logo cloud templates
+        │   ├── LogoCloudMarquee.tsx
+        │   └── LogoCloudAside.tsx
         ├── Features.tsx      Reference features section (grid variant)
         ├── features/         Alternative features templates
         │   ├── FeaturesAlternating.tsx

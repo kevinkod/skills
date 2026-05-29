@@ -212,6 +212,14 @@ slot.
 Use real, recognizable logos; keep them monochrome/grayscale for visual calm. Give
 each logo `alt=""` (decorative) since the accessible name comes from `name`.
 
+Three ready-to-copy variants — see [`references/logocloud-variants.md`](./references/logocloud-variants.md):
+
+| Variant | File |
+|---|---|
+| Grid (default) | [`LogoCloud.tsx`](./LogoCloud.tsx) |
+| Marquee (scrolling) | [`logoclouds/LogoCloudMarquee.tsx`](./logoclouds/LogoCloudMarquee.tsx) |
+| Aside (heading + logos) | [`logoclouds/LogoCloudAside.tsx`](./logoclouds/LogoCloudAside.tsx) |
+
 ## Testimonials section
 
 Customer quotes with author, role, and optional avatar. Reference component:
