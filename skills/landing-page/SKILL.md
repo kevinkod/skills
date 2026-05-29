@@ -31,6 +31,11 @@ Compose a full landing page top to bottom:
 
 Pick the sections that fit the product; order is a default, not a rule.
 
+A full assembled example wiring the default components in this order, with inline
+sample content, lives in
+[`examples/LandingPage.tsx`](./examples/LandingPage.tsx) — copy it, swap in real
+content, and replace any section with one of its variants.
+
 ## Anatomy of a hero section
 
 | Element | Role | Required |

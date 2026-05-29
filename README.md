@@ -40,6 +40,8 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
 └── skills/
     └── landing-page/
         ├── SKILL.md          The skill (source of truth)
+        ├── examples/
+        │   └── LandingPage.tsx    Full page assembled from the sections
         ├── Navbar.tsx        Reference navbar / header (standard variant)
         ├── navbars/          Alternative navbar templates
         │   ├── NavbarCentered.tsx
