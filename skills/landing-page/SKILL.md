@@ -99,6 +99,23 @@ accessible (`aria-labelledby`).
 
 Keep it short and single-purpose: one dominant action, minimal copy.
 
+## Footer section
+
+Site footer with brand, link columns, social links, and copyright. Reference
+component: [`Footer.tsx`](./Footer.tsx) — responsive (stacks on mobile), accessible
+(`<nav aria-label>`, screen-reader-only heading, social icons via `ReactNode` slot).
+
+| Element | Role | Required |
+|---|---|---|
+| Brand | Name or logo element | **Yes** |
+| Tagline | One line under the brand | No |
+| Link columns | Grouped navigation (Product, Company, Legal…) | **Yes** |
+| Social links | Icon links with accessible names | No |
+| Copyright | Legal line at the bottom | No (defaults) |
+
+Group links by intent, keep 3–5 columns max, and give every social link an
+accessible `label`.
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
