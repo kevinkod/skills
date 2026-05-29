@@ -148,6 +148,23 @@ slot.
 Use real, recognizable logos; keep them monochrome/grayscale for visual calm. Give
 each logo `alt=""` (decorative) since the accessible name comes from `name`.
 
+## Testimonials section
+
+Customer quotes with author, role, and optional avatar. Reference component:
+[`Testimonials.tsx`](./Testimonials.tsx) — responsive grid (1 → 3 columns),
+accessible (semantic `<figure>`/`<blockquote>`/`<figcaption>`).
+
+| Element | Role | Required |
+|---|---|---|
+| Title (h2) | Section heading | **Yes** |
+| Quote | The testimonial text | **Yes** |
+| Author | Who said it | **Yes** |
+| Role | Title + company | No |
+| Avatar | Author photo (`alt=""`, decorative) | No |
+
+Use real names and specific, concrete quotes (outcomes, not adjectives). Decorative
+avatars take `alt=""` since the name is in the caption.
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
