@@ -46,6 +46,24 @@ Workflow:
 3. Copy `Hero.tsx`, fill in the content, tune the Tailwind classes to the brand.
 4. Verify against the quality checklist.
 
+## Features section
+
+A grid of product features below the hero. Reference component:
+[`Features.tsx`](./Features.tsx) — responsive grid (1 col → 2 at `md` → 3 at `lg`),
+accessible (`aria-labelledby`, semantic list).
+
+| Element | Role | Required |
+|---|---|---|
+| Eyebrow | Small label above the section title | No |
+| Title (h2) | What the feature set delivers | **Yes** |
+| Subtitle | One sentence framing the features | No |
+| Feature icon | Visual marker, passed via an `icon?: ReactNode` slot (no icon-library dependency) | No |
+| Feature title (h3) | Short, benefit-oriented | **Yes** |
+| Feature description | 1–2 sentences | **Yes** |
+
+Layout variants: **3-column** (default, SaaS), **2-column** (fewer, richer features),
+**alternating** (icon/text rows for storytelling). Adjust the grid classes to switch.
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
