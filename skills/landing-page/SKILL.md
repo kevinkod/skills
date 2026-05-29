@@ -116,6 +116,23 @@ component: [`Footer.tsx`](./Footer.tsx) — responsive (stacks on mobile), acces
 Group links by intent, keep 3–5 columns max, and give every social link an
 accessible `label`.
 
+## Navbar / Header section
+
+Sticky top navigation with a mobile menu. Reference component:
+[`Navbar.tsx`](./Navbar.tsx) — responsive (desktop links / mobile toggle),
+accessible (`<nav aria-label>`, `aria-expanded` + `aria-controls` toggle).
+
+| Element | Role | Required |
+|---|---|---|
+| Brand | Name or logo, links home | **Yes** |
+| Nav links | Anchors to page sections | **Yes** |
+| CTA | Primary action button | No |
+| Mobile toggle | Opens the menu under `md` (`useState`) | **Yes** |
+
+**Stateful component:** uses `useState` for the mobile menu, so it needs
+`"use client"` in the Next.js App Router (already included). Keep the link set short
+(3–6) and a single CTA.
+
 ## Quality checklist
 
 - [ ] **Responsive**: tested mobile → desktop, no overflow, tappable CTA (≥ 44px).
