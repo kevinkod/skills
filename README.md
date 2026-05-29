@@ -49,9 +49,13 @@ copy `AGENTS.md` + the `skills/` folder to the root of your project).
         │   ├── HeroWaitlist.tsx
         │   └── HeroScreenshot.tsx
         ├── references/
-        │   └── hero-variants.md   Hero catalog: when to use each, props
+        │   ├── hero-variants.md       Hero catalog: when to use each, props
+        │   └── features-variants.md   Features catalog
         ├── LogoCloud.tsx     Reference logo cloud (social proof)
-        ├── Features.tsx      Reference features section
+        ├── Features.tsx      Reference features section (grid variant)
+        ├── features/         Alternative features templates
+        │   ├── FeaturesAlternating.tsx
+        │   └── FeaturesSplit.tsx
         ├── Pricing.tsx       Reference pricing section
         ├── Testimonials.tsx  Reference testimonials section
         ├── FAQ.tsx           Reference FAQ section

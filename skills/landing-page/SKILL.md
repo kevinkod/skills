@@ -88,8 +88,13 @@ accessible (`aria-labelledby`, semantic list).
 | Feature title (h3) | Short, benefit-oriented | **Yes** |
 | Feature description | 1–2 sentences | **Yes** |
 
-Layout variants: **3-column** (default, SaaS), **2-column** (fewer, richer features),
-**alternating** (icon/text rows for storytelling). Adjust the grid classes to switch.
+Three ready-to-copy variants — see [`references/features-variants.md`](./references/features-variants.md):
+
+| Variant | File |
+|---|---|
+| Grid (default) | [`Features.tsx`](./Features.tsx) |
+| Alternating (zigzag rows) | [`features/FeaturesAlternating.tsx`](./features/FeaturesAlternating.tsx) |
+| Split (heading + list) | [`features/FeaturesSplit.tsx`](./features/FeaturesSplit.tsx) |
 
 ## Pricing section
 
