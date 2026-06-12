@@ -2,8 +2,9 @@
 
 // Navbar variant: CENTERED LOGO — links split left/right around a centered brand.
 // Best for editorial / brand-led sites that want a symmetric header.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
 // Stateful: the mobile menu uses useState, so it needs "use client" in Next.js.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 import { useState } from "react";
 import type { ReactNode } from "react";
@@ -23,7 +24,7 @@ export function NavbarCentered({ brand, links }: NavbarCenteredProps) {
   const right = links.slice(mid);
 
   return (
-    <header className="border-b border-gray-200 bg-white">
+    <header className="border-b border-border bg-surface">
       <nav
         aria-label="Main"
         className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:grid md:grid-cols-3"
@@ -34,7 +35,7 @@ export function NavbarCentered({ brand, links }: NavbarCenteredProps) {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-gray-700 transition hover:text-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="text-sm font-medium text-muted transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {link.label}
               </a>
@@ -45,7 +46,7 @@ export function NavbarCentered({ brand, links }: NavbarCenteredProps) {
         {/* Brand (centered on desktop) */}
         <a
           href="/"
-          className="text-lg font-bold text-gray-900 md:justify-self-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+          className="font-display text-lg font-bold text-ink md:justify-self-center focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {brand}
         </a>
@@ -56,7 +57,7 @@ export function NavbarCentered({ brand, links }: NavbarCenteredProps) {
             <li key={link.label}>
               <a
                 href={link.href}
-                className="text-sm font-medium text-gray-700 transition hover:text-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="text-sm font-medium text-muted transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {link.label}
               </a>
@@ -70,7 +71,7 @@ export function NavbarCentered({ brand, links }: NavbarCenteredProps) {
           aria-expanded={open}
           aria-controls="mobile-menu-centered"
           onClick={() => setOpen((v) => !v)}
-          className="inline-flex h-10 w-10 items-center justify-center rounded-lg text-gray-700 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 md:hidden"
+          className="inline-flex h-10 w-10 items-center justify-center rounded-control text-ink hover:bg-surface-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent md:hidden"
         >
           <span className="sr-only">{open ? "Close menu" : "Open menu"}</span>
           <span aria-hidden="true" className="text-xl">
@@ -81,14 +82,14 @@ export function NavbarCentered({ brand, links }: NavbarCenteredProps) {
 
       {/* Mobile menu */}
       {open && (
-        <div id="mobile-menu-centered" className="border-t border-gray-200 md:hidden">
+        <div id="mobile-menu-centered" className="border-t border-border md:hidden">
           <ul role="list" className="space-y-1 px-6 py-4">
             {links.map((link) => (
               <li key={link.label}>
                 <a
                   href={link.href}
                   onClick={() => setOpen(false)}
-                  className="block rounded-lg px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-100 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                  className="block rounded-control px-3 py-2 text-base font-medium text-muted hover:bg-surface-2 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   {link.label}
                 </a>

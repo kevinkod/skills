@@ -1,7 +1,8 @@
 // Features variant: SPLIT — sticky heading column beside a compact feature list.
 // Best when the section intro needs weight (heading + CTA) next to many features.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
 // Icons use a ReactNode slot, so there is no icon-library dependency.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 import type { ReactNode } from "react";
 
@@ -29,29 +30,29 @@ export function FeaturesSplit({
   return (
     <section
       aria-labelledby="features-title"
-      className="bg-white py-20 lg:py-28"
+      className="bg-surface py-20 lg:py-28"
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-12 px-6 lg:grid-cols-3 lg:gap-16">
         {/* Heading column */}
         <div className="lg:sticky lg:top-24 lg:self-start">
           {eyebrow && (
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-indigo-600">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-accent">
               {eyebrow}
             </p>
           )}
           <h2
             id="features-title"
-            className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl"
           >
             {title}
           </h2>
           {subtitle && (
-            <p className="mt-4 text-lg leading-8 text-gray-600">{subtitle}</p>
+            <p className="mt-4 text-lg leading-8 text-muted">{subtitle}</p>
           )}
           {cta && (
             <a
               href={cta.href}
-              className="mt-8 inline-flex min-h-11 items-center justify-center rounded-lg bg-indigo-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="mt-8 inline-flex min-h-11 items-center justify-center rounded-control bg-brand px-6 text-base font-semibold text-on-brand shadow-cta transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {cta.label}
             </a>
@@ -68,16 +69,16 @@ export function FeaturesSplit({
               {feature.icon && (
                 <div
                   aria-hidden="true"
-                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-indigo-600 text-white [&>svg]:h-5 [&>svg]:w-5"
+                  className="flex h-10 w-10 shrink-0 items-center justify-center rounded-control bg-brand text-on-brand shadow-cta [&>svg]:h-5 [&>svg]:w-5"
                 >
                   {feature.icon}
                 </div>
               )}
               <div>
-                <h3 className="text-base font-semibold text-gray-900">
+                <h3 className="text-base font-semibold text-ink">
                   {feature.title}
                 </h3>
-                <p className="mt-1 text-sm leading-6 text-gray-600">
+                <p className="mt-1 text-sm leading-6 text-muted">
                   {feature.description}
                 </p>
               </div>

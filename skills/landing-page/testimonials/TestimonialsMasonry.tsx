@@ -1,7 +1,8 @@
 // Testimonials variant: MASONRY — a dense multi-column wall of short quotes.
 // Best for showing volume of love (many concise quotes) as social proof.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
 // Uses CSS columns so cards of varying height pack tightly without JS.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 type Testimonial = {
   quote: string;
@@ -24,18 +25,18 @@ export function TestimonialsMasonry({
   return (
     <section
       aria-labelledby="testimonials-title"
-      className="bg-white py-20 lg:py-28"
+      className="bg-surface py-20 lg:py-28"
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           {eyebrow && (
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-indigo-600">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-accent">
               {eyebrow}
             </p>
           )}
           <h2
             id="testimonials-title"
-            className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl"
           >
             {title}
           </h2>
@@ -48,8 +49,8 @@ export function TestimonialsMasonry({
         >
           {testimonials.map((t) => (
             <li key={t.author}>
-              <figure className="rounded-2xl bg-gray-50 p-6 ring-1 ring-gray-200">
-                <blockquote className="text-sm leading-6 text-gray-700">
+              <figure className="rounded-card border border-border bg-surface p-6 shadow-card">
+                <blockquote className="text-sm leading-6 text-ink">
                   <p>“{t.quote}”</p>
                 </blockquote>
                 <figcaption className="mt-4 flex items-center gap-x-3">
@@ -57,15 +58,15 @@ export function TestimonialsMasonry({
                     <img
                       src={t.avatarUrl}
                       alt=""
-                      className="h-8 w-8 rounded-full bg-gray-100 object-cover"
+                      className="h-8 w-8 rounded-full bg-surface-2 object-cover"
                     />
                   )}
                   <div>
-                    <div className="text-sm font-semibold text-gray-900">
+                    <div className="text-sm font-semibold text-ink">
                       {t.author}
                     </div>
                     {t.role && (
-                      <div className="text-xs text-gray-500">{t.role}</div>
+                      <div className="text-xs text-muted">{t.role}</div>
                     )}
                   </div>
                 </figcaption>

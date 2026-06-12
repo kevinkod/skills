@@ -1,6 +1,7 @@
 // Hero variant: SCREENSHOT — centered copy with a large product screenshot below.
 // Best for SaaS/app products where seeing the UI is the strongest selling point.
 // React + Tailwind, TypeScript. Responsive and accessible.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 type HeroScreenshotProps = {
   eyebrow?: string;
@@ -22,32 +23,32 @@ export function HeroScreenshot({
   imageAlt,
 }: HeroScreenshotProps) {
   return (
-    <section className="bg-white">
+    <section className="bg-surface">
       <div className="mx-auto max-w-7xl px-6 pt-24 lg:pt-32">
         {/* Copy */}
         <div className="mx-auto max-w-3xl text-center">
           {eyebrow && (
-            <p className="mb-4 inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-200">
+            <p className="mb-4 inline-flex items-center rounded-full border border-border bg-surface-2 px-3 py-1 text-sm font-medium text-accent">
               {eyebrow}
             </p>
           )}
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
             {title}
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+          <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted">
             {subtitle}
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href={primaryCta.href}
-              className="inline-flex min-h-11 items-center justify-center rounded-lg bg-indigo-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="inline-flex min-h-11 items-center justify-center rounded-control bg-brand px-6 text-base font-semibold text-on-brand shadow-cta transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {primaryCta.label}
             </a>
             {secondaryCta && (
               <a
                 href={secondaryCta.href}
-                className="inline-flex min-h-11 items-center justify-center rounded-lg px-4 text-base font-semibold text-gray-900 transition hover:text-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="inline-flex min-h-11 items-center justify-center rounded-control px-4 text-base font-semibold text-ink transition hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {secondaryCta.label} <span aria-hidden="true">→</span>
               </a>
@@ -61,7 +62,7 @@ export function HeroScreenshot({
             src={imageUrl}
             alt={imageAlt}
             loading="lazy"
-            className="w-full rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+            className="w-full rounded-card border border-border shadow-card"
           />
         </div>
       </div>
