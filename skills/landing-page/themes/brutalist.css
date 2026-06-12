@@ -1,0 +1,23 @@
+/* landing-page vibe: BRUTALIST — mono, hard borders, hard offset shadow.
+   Paste AFTER `@import "tailwindcss";`. Fonts: Space Mono / IBM Plex Mono. */
+@theme {
+  --color-surface: #ffffff;
+  --color-surface-2: #f4f4f0;
+  --color-ink: #000000;
+  --color-muted: #444444;
+  --color-brand: #000000;
+  --color-on-brand: #ffffff;
+  --color-accent: #ff3b00;
+  --color-border: #000000;
+  --font-display: "Space Mono", "IBM Plex Mono", monospace;
+  --font-body: "IBM Plex Mono", ui-monospace, monospace;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-control: 0;
+  --radius-card: 0;
+  --shadow-cta: 4px 4px 0 0 #000000;
+  --shadow-card: 4px 4px 0 0 #000000;
+}
+:root {
+  --border-width: 2px;
+  --gradient-accent: none;
+}

@@ -1,0 +1,23 @@
+/* landing-page vibe: PLAYFUL — warm, rounded, friendly (jam-jar energy).
+   Paste AFTER `@import "tailwindcss";`. Fonts: Baloo 2 (display), Inter. */
+@theme {
+  --color-surface: #fff7ef;
+  --color-surface-2: #ffffff;
+  --color-ink: #2a1626;
+  --color-muted: #7a6a70;
+  --color-brand: #ff6b45;
+  --color-on-brand: #ffffff;
+  --color-accent: #d63d54;
+  --color-border: #f3e2d4;
+  --font-display: "Baloo 2", "Fraunces", cursive;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+  --radius-control: 0.75rem;
+  --radius-card: 1rem;
+  --shadow-cta: 0 10px 24px -8px rgba(255, 107, 69, 0.5);
+  --shadow-card: 0 8px 20px -10px rgba(122, 46, 91, 0.25);
+}
+:root {
+  --border-width: 1px;
+  --gradient-accent: linear-gradient(135deg, #ffc4a8, #ffd66b);
+}
