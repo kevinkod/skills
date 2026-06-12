@@ -1,7 +1,7 @@
 // Reference logo cloud (social proof) section — "trusted by" brand logos.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
 // Logos use a ReactNode slot, so there is no asset/icon-library dependency.
-// Copy this component, then adapt the heading, logos, and colors to your brand.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 import type { ReactNode } from "react";
 
@@ -22,11 +22,11 @@ export function LogoCloud({
   logos,
 }: LogoCloudProps) {
   return (
-    <section aria-labelledby="logos-title" className="bg-white py-16">
+    <section aria-labelledby="logos-title" className="bg-surface py-16">
       <div className="mx-auto max-w-7xl px-6">
         <h2
           id="logos-title"
-          className="text-center text-sm font-semibold uppercase tracking-wide text-gray-500"
+          className="text-center text-sm font-semibold uppercase tracking-wide text-muted"
         >
           {heading}
         </h2>
@@ -38,7 +38,7 @@ export function LogoCloud({
           {logos.map((item) => (
             <li
               key={item.name}
-              className="flex justify-center text-gray-400 grayscale opacity-70 transition hover:opacity-100 hover:grayscale-0 [&_img]:h-8 [&_img]:w-auto [&>svg]:h-8 [&>svg]:w-auto"
+              className="flex justify-center text-muted opacity-70 grayscale transition hover:opacity-100 hover:grayscale-0 [&_img]:h-8 [&_img]:w-auto [&>svg]:h-8 [&>svg]:w-auto"
             >
               <span className="sr-only">{item.name}</span>
               {item.logo}

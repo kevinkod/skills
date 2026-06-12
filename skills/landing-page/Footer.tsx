@@ -1,7 +1,7 @@
 // Reference footer section — link columns, brand, social links, copyright.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
 // Social icons use a ReactNode slot, so there is no icon-library dependency.
-// Copy this component, then adapt the content, links, and colors to your brand.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 import type { ReactNode } from "react";
 
@@ -38,7 +38,10 @@ export function Footer({
   copyright,
 }: FooterProps) {
   return (
-    <footer aria-labelledby="footer-title" className="bg-gray-900 text-gray-300">
+    <footer
+      aria-labelledby="footer-title"
+      className="border-t border-border bg-surface-2 text-muted"
+    >
       <h2 id="footer-title" className="sr-only">
         Footer
       </h2>
@@ -46,9 +49,11 @@ export function Footer({
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-3">
           {/* Brand */}
           <div className="max-w-sm">
-            <div className="text-lg font-semibold text-white">{brand}</div>
+            <div className="font-display text-lg font-semibold text-ink">
+              {brand}
+            </div>
             {tagline && (
-              <p className="mt-3 text-sm leading-6 text-gray-400">{tagline}</p>
+              <p className="mt-3 text-sm leading-6 text-muted">{tagline}</p>
             )}
             {socials && socials.length > 0 && (
               <ul role="list" className="mt-6 flex gap-4">
@@ -56,10 +61,12 @@ export function Footer({
                   <li key={social.label}>
                     <a
                       href={social.href}
-                      className="inline-flex text-gray-400 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white [&>svg]:h-5 [&>svg]:w-5"
+                      className="inline-flex text-muted transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent [&>svg]:h-5 [&>svg]:w-5"
                     >
                       <span className="sr-only">{social.label}</span>
-                      {social.icon ?? <span aria-hidden="true">{social.label}</span>}
+                      {social.icon ?? (
+                        <span aria-hidden="true">{social.label}</span>
+                      )}
                     </a>
                   </li>
                 ))}
@@ -74,15 +81,13 @@ export function Footer({
           >
             {columns.map((column) => (
               <div key={column.title}>
-                <h3 className="text-sm font-semibold text-white">
-                  {column.title}
-                </h3>
+                <h3 className="text-sm font-semibold text-ink">{column.title}</h3>
                 <ul role="list" className="mt-4 space-y-3">
                   {column.links.map((link) => (
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm leading-6 text-gray-400 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        className="text-sm leading-6 text-muted transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                       >
                         {link.label}
                       </a>
@@ -94,7 +99,7 @@ export function Footer({
           </nav>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8 text-sm text-gray-400">
+        <div className="mt-12 border-t border-border pt-8 text-sm text-muted">
           {copyright ?? <>© {brand}. All rights reserved.</>}
         </div>
       </div>

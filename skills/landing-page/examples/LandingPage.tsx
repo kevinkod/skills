@@ -5,6 +5,12 @@
 //
 // Swapping a variant: e.g. import { HeroGradient } from "../heroes/HeroGradient"
 // and use it in place of <Hero ... /> below.
+//
+// ART DIRECTION: this page is theme-driven. Pick ONE vibe and either paste its
+// @theme block into your app.css (after `@import "tailwindcss";`) or, in a
+// Vite/Tailwind-v4 setup, import it:  import "../themes/aurora.css";
+// Vibes: editorial · aurora · brutalist · playful
+// (see ../themes/ and ../references/art-direction.md). Requires Tailwind v4.
 
 import { Navbar } from "../Navbar";
 import { Hero } from "../Hero";
