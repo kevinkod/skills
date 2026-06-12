@@ -1,6 +1,7 @@
 // Features variant: ALTERNATING — image/text rows that zigzag down the page.
 // Best for storytelling: a few rich features, each with its own visual.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 type Feature = {
   title: string;
@@ -24,18 +25,18 @@ export function FeaturesAlternating({
   return (
     <section
       aria-labelledby="features-title"
-      className="bg-white py-20 lg:py-28"
+      className="bg-surface py-20 lg:py-28"
     >
       <div className="mx-auto max-w-7xl px-6">
         <div className="mx-auto max-w-2xl text-center">
           {eyebrow && (
-            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-indigo-600">
+            <p className="mb-3 text-sm font-semibold uppercase tracking-wide text-accent">
               {eyebrow}
             </p>
           )}
           <h2
             id="features-title"
-            className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+            className="font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl"
           >
             {title}
           </h2>
@@ -49,17 +50,17 @@ export function FeaturesAlternating({
             >
               {/* Text — order flips on odd rows for the zigzag */}
               <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                <h3 className="text-2xl font-bold tracking-tight text-gray-900">
+                <h3 className="text-2xl font-bold tracking-tight text-ink">
                   {feature.title}
                 </h3>
-                <p className="mt-4 text-lg leading-8 text-gray-600">
+                <p className="mt-4 text-lg leading-8 text-muted">
                   {feature.description}
                 </p>
                 {feature.bullets && feature.bullets.length > 0 && (
                   <ul role="list" className="mt-6 space-y-3">
                     {feature.bullets.map((bullet) => (
-                      <li key={bullet} className="flex gap-x-3 text-gray-700">
-                        <span aria-hidden="true" className="text-indigo-600">
+                      <li key={bullet} className="flex gap-x-3 text-muted">
+                        <span aria-hidden="true" className="text-accent">
                           ✓
                         </span>
                         <span>{bullet}</span>
@@ -75,7 +76,7 @@ export function FeaturesAlternating({
                   src={feature.imageUrl}
                   alt={feature.imageAlt}
                   loading="lazy"
-                  className="w-full rounded-xl shadow-xl ring-1 ring-gray-900/10"
+                  className="w-full rounded-card border border-border bg-surface-2 shadow-card"
                 />
               </div>
             </div>

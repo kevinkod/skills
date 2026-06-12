@@ -2,7 +2,8 @@
 
 // Footer variant: NEWSLETTER — link columns plus an email signup form.
 // Best when you want to capture subscribers from the footer.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 // Stateful: the signup form uses useState, so it needs "use client" in Next.js.
 
 import { useState } from "react";
@@ -38,7 +39,7 @@ export function FooterNewsletter({
   }
 
   return (
-    <footer aria-labelledby="footer-title" className="bg-gray-900 text-gray-300">
+    <footer aria-labelledby="footer-title" className="border-t border-border bg-surface-2 text-muted">
       <h2 id="footer-title" className="sr-only">
         Footer
       </h2>
@@ -51,7 +52,7 @@ export function FooterNewsletter({
           >
             {columns.map((column) => (
               <div key={column.title}>
-                <h3 className="text-sm font-semibold text-white">
+                <h3 className="text-sm font-semibold text-ink">
                   {column.title}
                 </h3>
                 <ul role="list" className="mt-4 space-y-3">
@@ -59,7 +60,7 @@ export function FooterNewsletter({
                     <li key={link.label}>
                       <a
                         href={link.href}
-                        className="text-sm text-gray-400 transition hover:text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                        className="text-sm text-muted transition hover:text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                       >
                         {link.label}
                       </a>
@@ -72,9 +73,9 @@ export function FooterNewsletter({
 
           {/* Newsletter */}
           <div className="max-w-md">
-            <h3 className="text-sm font-semibold text-white">{newsletterTitle}</h3>
+            <h3 className="text-sm font-semibold text-ink">{newsletterTitle}</h3>
             {newsletterText && (
-              <p className="mt-2 text-sm text-gray-400">{newsletterText}</p>
+              <p className="mt-2 text-sm text-muted">{newsletterText}</p>
             )}
             {done ? (
               <p role="status" className="mt-4 text-sm font-medium text-green-400">
@@ -92,11 +93,11 @@ export function FooterNewsletter({
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="you@example.com"
-                  className="min-h-11 flex-1 rounded-lg border border-white/20 bg-white/10 px-4 text-base text-white placeholder:text-gray-400 focus:border-indigo-400 focus:outline-none focus:ring-2 focus:ring-indigo-400"
+                  className="min-h-11 flex-1 rounded-control border border-border bg-surface-2 px-4 text-base text-ink placeholder:text-muted focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent"
                 />
                 <button
                   type="submit"
-                  className="inline-flex min-h-11 items-center justify-center rounded-lg bg-indigo-600 px-5 text-base font-semibold text-white transition hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+                  className="inline-flex min-h-11 items-center justify-center rounded-control bg-brand px-5 text-base font-semibold text-on-brand transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                 >
                   Subscribe
                 </button>
@@ -105,7 +106,7 @@ export function FooterNewsletter({
           </div>
         </div>
 
-        <div className="mt-12 border-t border-white/10 pt-8 text-sm text-gray-400">
+        <div className="mt-12 border-t border-border pt-8 text-sm text-muted">
           {copyright ?? <>© {brand}. All rights reserved.</>}
         </div>
       </div>

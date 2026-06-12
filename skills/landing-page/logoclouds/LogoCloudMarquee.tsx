@@ -1,6 +1,7 @@
 // LogoCloud variant: MARQUEE — logos scroll horizontally in a continuous loop.
 // Best when you have many logos and want subtle motion as social proof.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 // Pure CSS animation (no JS). Respects prefers-reduced-motion via motion-reduce.
 //
 // Tailwind config — add this keyframe/animation:
@@ -27,11 +28,11 @@ export function LogoCloudMarquee({
   const row = [...logos, ...logos];
 
   return (
-    <section aria-labelledby="logos-title" className="bg-white py-16">
+    <section aria-labelledby="logos-title" className="bg-surface py-16">
       <div className="mx-auto max-w-7xl px-6">
         <h2
           id="logos-title"
-          className="text-center text-sm font-semibold uppercase tracking-wide text-gray-500"
+          className="text-center text-sm font-semibold uppercase tracking-wide text-muted"
         >
           {heading}
         </h2>
@@ -47,7 +48,7 @@ export function LogoCloudMarquee({
               <li
                 key={`${item.name}-${i}`}
                 aria-hidden={i >= logos.length}
-                className="flex shrink-0 items-center text-gray-400 grayscale opacity-70 [&_img]:h-8 [&_img]:w-auto [&>svg]:h-8 [&>svg]:w-auto"
+                className="flex shrink-0 items-center text-muted grayscale opacity-70 [&_img]:h-8 [&_img]:w-auto [&>svg]:h-8 [&>svg]:w-auto"
               >
                 <span className="sr-only">{i < logos.length ? item.name : ""}</span>
                 {item.logo}
