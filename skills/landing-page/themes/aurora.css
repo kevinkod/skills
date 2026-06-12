@@ -1,0 +1,24 @@
+/* landing-page vibe: AURORA — dark, glass, vivid glow. Premium tech.
+   Paste AFTER `@import "tailwindcss";`. Fonts: Space Grotesk / Inter. */
+@theme {
+  --color-surface: #0a0a0f;
+  --color-surface-2: #15151f;
+  --color-ink: #f5f5fa;
+  --color-muted: #9a9aae;
+  --color-brand: #7c5cff;
+  --color-on-brand: #ffffff;
+  --color-accent: #22d3ee;
+  --color-border: #2a2a3a;
+  --font-display: "Space Grotesk", "Inter", sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "Geist Mono", ui-monospace, monospace;
+  --radius-control: 0.5rem;
+  --radius-card: 0.75rem;
+  --shadow-cta: 0 8px 30px -8px rgba(124, 92, 255, 0.6);
+  --shadow-card: 0 4px 24px -8px rgba(0, 0, 0, 0.5);
+}
+:root {
+  --border-width: 1px;
+  --gradient-accent: radial-gradient(120% 120% at 50% 0%, rgba(124, 92, 255, 0.35), transparent 60%),
+    linear-gradient(135deg, rgba(124, 92, 255, 0.2), rgba(34, 211, 238, 0.13));
+}

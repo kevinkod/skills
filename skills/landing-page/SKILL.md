@@ -7,13 +7,36 @@ description: Use when building a landing page or a hero section in React + Tailw
 
 ## Overview
 
-Build landing pages section by section in **React + Tailwind (TypeScript / `.tsx`)**.
+Build landing pages section by section in **React + Tailwind v4 (TypeScript / `.tsx`)**.
 The repo starts minimal: one solid section, the **hero section** (the above-the-fold
 area). Compose the page by adding more sections on top.
 
 Principle: one section = one self-contained `.tsx` component, responsive and
 accessible, that you copy and adapt to the product. No magic generator — a
 production-quality starting point you customize.
+
+## Art direction (themes)
+
+The components are **theme-driven**: they reference semantic design tokens, never
+hardcoded colors. Each "vibe" is a complete token set in `themes/<vibe>.css`.
+Pasting one preset restyles the whole page — this is what prevents the generic
+"AI look." **Requires Tailwind v4** (tokens are declared with `@theme`).
+
+Pick ONE vibe, paste its `themes/<vibe>.css` into your `app.css` after
+`@import "tailwindcss";`, and load the fonts it names:
+
+| Vibe | Character |
+|---|---|
+| `editorial` | type-forward serif, warm cream, minimal color |
+| `aurora` | dark, glassy, vivid violet→cyan glow |
+| `brutalist` | monospace, hard black borders, offset shadows |
+| `playful` | warm coral, rounded, soft shadows |
+
+Full token contract, per-vibe values, and a "when to use" guide live in
+[`references/art-direction.md`](./references/art-direction.md). Components use
+`bg-surface`, `text-ink`, `bg-brand`, `text-on-brand`, `text-accent`,
+`border-border`, `rounded-control` / `rounded-card`, `shadow-cta` / `shadow-card`,
+and `font-display` — never `bg-indigo-*` / `text-gray-*`.
 
 ## Recommended page order
 
@@ -73,9 +96,10 @@ Six ready-to-copy hero templates, all responsive and accessible. The default
 | Screenshot | [`heroes/HeroScreenshot.tsx`](./heroes/HeroScreenshot.tsx) |
 
 Workflow:
+0. Pick a vibe preset (`themes/<vibe>.css`) and paste it into your `app.css` — see "Art direction (themes)" above.
 1. Ask for (or infer): product, audience, value proposition, desired action.
 2. Pick a variant (see the catalog's "Choosing a variant" guide).
-3. Copy the chosen file, fill in the content, tune the Tailwind classes to the brand.
+3. Copy the chosen file, fill in the content; the brand look comes from the vibe tokens, not per-file color edits.
 4. Verify against the quality checklist.
 
 ## Features section
@@ -281,8 +305,9 @@ Three ready-to-copy variants — see [`references/faq-variants.md`](./references
 - [ ] **Hierarchy**: the title dominates, the primary CTA stands out from the secondary.
 - [ ] **Content**: concrete title (a benefit, not a vague slogan), subtitle that complements it.
 - [ ] **Performance**: optimized image (`loading`, dimensions), no heavy dependency.
-- [ ] **No "AI look"**: avoid the generic purple gradient + emoji + lorem ipsum.
-      Intentional typography and spacing choices.
+- [ ] **No "AI look"**: pick a vibe preset (see "Art direction"); never hardcode
+      `indigo` / `gray` utilities — the token system is what prevents the generic
+      template look. Intentional typography and spacing choices.
 
 ## Extending to other sections
 

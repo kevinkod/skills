@@ -1,0 +1,24 @@
+/* landing-page vibe: EDITORIAL — type-forward, warm, magazine.
+   Paste this block into your app.css, AFTER `@import "tailwindcss";`.
+   Load fonts: Fraunces (display), Inter (body). */
+@theme {
+  --color-surface: #faf9f5;
+  --color-surface-2: #ffffff;
+  --color-ink: #14110f;
+  --color-muted: #6b6356;
+  --color-brand: #14110f;
+  --color-on-brand: #faf9f5;
+  --color-accent: #9a3b1b;
+  --color-border: #e6e1d6;
+  --font-display: "Fraunces", Georgia, serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --radius-control: 0.25rem;
+  --radius-card: 0.375rem;
+  --shadow-cta: none;
+  --shadow-card: none;
+}
+:root {
+  --border-width: 1px;
+  --gradient-accent: linear-gradient(135deg, #f0ebe0, #faf9f5);
+}

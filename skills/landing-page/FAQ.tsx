@@ -1,9 +1,9 @@
 "use client";
 
 // Reference FAQ section — accessible accordion of question/answer pairs.
-// React + Tailwind, TypeScript. Responsive and accessible.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
 // Stateful: tracks the open item with useState, so it needs "use client" in Next.js.
-// Copy this component, then adapt the questions and colors to your brand.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 import { useState } from "react";
 
@@ -18,16 +18,16 @@ export function FAQ({ title = "Frequently asked questions", items }: FAQProps) {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
 
   return (
-    <section aria-labelledby="faq-title" className="bg-white py-20 lg:py-28">
+    <section aria-labelledby="faq-title" className="bg-surface py-20 lg:py-28">
       <div className="mx-auto max-w-3xl px-6">
         <h2
           id="faq-title"
-          className="text-center text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl"
+          className="text-center font-display text-3xl font-bold tracking-tight text-ink sm:text-4xl"
         >
           {title}
         </h2>
 
-        <dl className="mt-12 divide-y divide-gray-200">
+        <dl className="mt-12 divide-y divide-border">
           {items.map((item, index) => {
             const open = openIndex === index;
             const panelId = `faq-panel-${index}`;
@@ -41,10 +41,10 @@ export function FAQ({ title = "Frequently asked questions", items }: FAQProps) {
                     aria-expanded={open}
                     aria-controls={panelId}
                     onClick={() => setOpenIndex(open ? null : index)}
-                    className="flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-gray-900 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                    className="flex w-full items-center justify-between gap-4 text-left text-base font-semibold text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
                   >
                     <span>{item.question}</span>
-                    <span aria-hidden="true" className="text-xl text-indigo-600">
+                    <span aria-hidden="true" className="text-xl text-accent">
                       {open ? "–" : "+"}
                     </span>
                   </button>
@@ -54,7 +54,7 @@ export function FAQ({ title = "Frequently asked questions", items }: FAQProps) {
                     id={panelId}
                     role="region"
                     aria-labelledby={buttonId}
-                    className="mt-3 text-base leading-7 text-gray-600"
+                    className="mt-3 text-base leading-7 text-muted"
                   >
                     {item.answer}
                   </dd>

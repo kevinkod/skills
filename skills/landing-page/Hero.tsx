@@ -1,6 +1,6 @@
 // Reference hero section — "split" variant (text on the left, visual on the right).
-// React + Tailwind, TypeScript. Responsive and accessible.
-// Copy this component, then adapt the content, links, and colors to your brand.
+// React + Tailwind v4, TypeScript. Responsive and accessible.
+// Themed via semantic tokens — pick a vibe in ../themes (see SKILL.md "Art direction").
 
 type HeroProps = {
   eyebrow?: string;
@@ -8,7 +8,7 @@ type HeroProps = {
   subtitle: string;
   primaryCta: { label: string; href: string };
   secondaryCta?: { label: string; href: string };
-  /** Product visual URL; if absent, a gradient placeholder is shown. */
+  /** Product visual URL; if absent, a themed accent panel is shown. */
   imageUrl?: string;
   imageAlt?: string;
 };
@@ -23,26 +23,26 @@ export function Hero({
   imageAlt = "",
 }: HeroProps) {
   return (
-    <section className="relative isolate overflow-hidden bg-white">
+    <section className="relative isolate overflow-hidden bg-surface">
       <div className="mx-auto grid max-w-7xl grid-cols-1 items-center gap-12 px-6 py-20 lg:grid-cols-2 lg:gap-16 lg:py-28">
         {/* Text column */}
         <div className="max-w-xl">
           {eyebrow && (
-            <p className="mb-4 inline-flex items-center rounded-full bg-indigo-50 px-3 py-1 text-sm font-medium text-indigo-700 ring-1 ring-inset ring-indigo-200">
+            <p className="mb-4 inline-flex items-center rounded-full border border-border bg-surface-2 px-3 py-1 text-sm font-medium text-accent">
               {eyebrow}
             </p>
           )}
 
-          <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl lg:text-6xl">
+          <h1 className="font-display text-4xl font-bold tracking-tight text-ink sm:text-5xl lg:text-6xl">
             {title}
           </h1>
 
-          <p className="mt-6 text-lg leading-8 text-gray-600">{subtitle}</p>
+          <p className="mt-6 text-lg leading-8 text-muted">{subtitle}</p>
 
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href={primaryCta.href}
-              className="inline-flex min-h-11 items-center justify-center rounded-lg bg-indigo-600 px-6 text-base font-semibold text-white shadow-sm transition hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="inline-flex min-h-11 items-center justify-center rounded-control bg-brand px-6 text-base font-semibold text-on-brand shadow-cta transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
             >
               {primaryCta.label}
             </a>
@@ -50,7 +50,7 @@ export function Hero({
             {secondaryCta && (
               <a
                 href={secondaryCta.href}
-                className="inline-flex min-h-11 items-center justify-center rounded-lg px-4 text-base font-semibold text-gray-900 transition hover:text-indigo-600 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="inline-flex min-h-11 items-center justify-center rounded-control px-4 text-base font-semibold text-ink transition hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
               >
                 {secondaryCta.label} <span aria-hidden="true">→</span>
               </a>
@@ -65,12 +65,12 @@ export function Hero({
               src={imageUrl}
               alt={imageAlt}
               loading="eager"
-              className="w-full rounded-xl shadow-2xl ring-1 ring-gray-900/10"
+              className="w-full rounded-card border border-border shadow-card"
             />
           ) : (
             <div
               aria-hidden="true"
-              className="aspect-[4/3] w-full rounded-xl bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 shadow-2xl ring-1 ring-gray-900/10"
+              className="aspect-[4/3] w-full rounded-card border border-border bg-surface-2 bg-[image:var(--gradient-accent)] shadow-card"
             />
           )}
         </div>
