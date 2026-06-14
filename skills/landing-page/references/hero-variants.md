@@ -51,3 +51,6 @@ Extra props by variant:
 - [ ] AA contrast — verify on gradient / background-image variants especially.
 - [ ] Responsive from 320px up; CTAs ≥ 44px tall.
 - [ ] Images: `alt` set (decorative → `alt=""`), `loading` chosen intentionally.
+- [ ] Decorative SVG/illustration elements carry a subtle, `motion-safe:`-gated
+      animation — see [`hero-motion.md`](./hero-motion.md). Static heroes look like
+      screenshots.

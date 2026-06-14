@@ -102,6 +102,17 @@ Workflow:
 3. Copy the chosen file, fill in the content; the brand look comes from the vibe tokens, not per-file color edits.
 4. Verify against the quality checklist.
 
+### Motion (always animate decorative hero SVGs)
+
+A hero's decorative SVG/illustration elements should always carry a *slight*, slow,
+looping animation — a drifting shape, a floating accent, a twinkling sparkle. It's
+the cheapest way to make a hero feel like a live product instead of a screenshot,
+and done right it never competes with the headline. Keep it subtle and
+compositor-only (`translate`/`rotate`/`opacity`), gate it on `motion-safe:`, and
+stagger instances so they don't move in lockstep. Paste-in keyframes, a worked
+inline-SVG scene, and per-hero retrofitting tips live in
+[`references/hero-motion.md`](./references/hero-motion.md).
+
 ## Features section
 
 A grid of product features below the hero. Reference component:
